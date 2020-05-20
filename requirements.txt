@@ -35,7 +35,7 @@ geopandas==0.7.0
 get==2019.4.13
 greenlet==0.4.15
 html5lib==1.0.1
-httplib2==0.12.1
+httplib2==0.18.0
 hyperlink==19.0.0
 idna==2.8
 imageio==2.6.1
