@@ -1,20 +1,22 @@
-import pyttsx3
-import speech_recognition as sr
-import datetime
-import wikipedia
-import webbrowser
-import os
-import smtplib
-import pyaudio
-import word2number
-from word2number import w2n
-import requests
-import reverse_geocoder as rg
-import pprint
-from selenium import webdriver
-import time
-from textblob import TextBlob as blob
-
+try:
+    import pyttsx3
+    import speech_recognition as sr
+    import datetime
+    import wikipedia
+    import webbrowser
+    import osmsiisng 
+    import smtplib
+    import pyaudio
+    import word2number
+    from word2number import w2n
+    import requests
+    import reverse_geocoder as rg
+    import pprint
+    from selenium import webdriver
+    import time
+    from textblob import TextBlob as blob
+except Exception as e:
+    print("Some modules are missing {}".format(e)) 
 
 
 coordinates = (12.817329,80.039988)
