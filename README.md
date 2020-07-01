@@ -1,8 +1,10 @@
 # Virtual_desktop_assistant
 Using various python library build a Desktop chat bot that can query the instruction given by the user
-                                                                            # JARVIS
+# JARVIS
 
-[![N|Solid](https://source.unsplash.com/40x60/?coding)](https://nodesource.com/products/nsolid)
+<div align="center">
+<img src="https://images.unsplash.com/photo-1579566346927-c68383817a25?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=180&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=180" >
+</div
 
 Jarvis "Desktop assistance bot is created to make life easy for a developer one can give command to the bot running at background and it will serve the solution for the given command"
 
