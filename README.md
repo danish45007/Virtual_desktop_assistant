@@ -1,6 +1,8 @@
 # Virtual_desktop_assistant
 Using various python library build a Desktop chat bot that can query the instruction given by the user
+<div align="center">
 # JARVIS
+</div>
 
 <div align="center">
 <img src="https://images.unsplash.com/photo-1579566346927-c68383817a25?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=180&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=180" >
