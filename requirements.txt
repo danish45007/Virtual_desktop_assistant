@@ -79,7 +79,7 @@ parso==0.5.1
 patsy==0.5.1
 pefile==2019.4.18
 pickleshare==0.7.5
-Pillow==6.2.1
+Pillow==8.1.1
 pipwin==0.4.5
 pizzapi==0.0.4
 pizzapy==0.0.0
