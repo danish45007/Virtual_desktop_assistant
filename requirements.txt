@@ -127,7 +127,7 @@ soupsieve==1.9.2
 SpeechRecognition==3.8.1
 sqlparse==0.3.1
 statsmodels==0.10.1
-tensorflow==1.15.2
+tensorflow==2.5.1
 terminado==0.8.3
 testpath==0.4.4
 text-unidecode==1.3
