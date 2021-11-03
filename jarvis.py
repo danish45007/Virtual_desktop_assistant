@@ -4,7 +4,6 @@ try:
     import datetime
     import wikipedia
     import webbrowser
-    import osmsiisng 
     import smtplib
     import pyaudio
     import word2number
@@ -15,12 +14,19 @@ try:
     from selenium import webdriver
     import time
     from textblob import TextBlob as blob
+    from notion import NotionClient
 except Exception as e:
     print("Some modules are missing {}".format(e)) 
 
 
 coordinates = (12.817329,80.039988)
-engine = pyttsx3.init('sapi5')
+
+token = "YOUR NOTION TOKEN HERE"
+database_id = "YOUR NOTION DATABASE_ID HERE"
+
+client = NotionClient(token, database_id)
+
+engine = pyttsx3.init()
 voices = engine.getProperty('voices')
 engine.setProperty('rate', 150)
 engine.setProperty('volume', 0.9)
@@ -55,10 +61,13 @@ def takeCommand():
         r.pause_threshold = 1
         r.adjust_for_ambient_noise(source, duration=1)
         audio = r.listen(source)
+        print(audio)
 
     try:
+        query = ""
         print("Recognizing...")
-        query = r.recognize_google(audio, language='en-in')
+        query = r.recognize_google(audio)
+        print(query)
         print(f"User said: {query}\n")
 
     except Exception as e:
@@ -164,7 +173,7 @@ if __name__ == "__main__":
             #speak(a)
 
         elif "whatsapp to friend" in query:
-            driver = webdriver.Chrome('C:\\Users\\DANISH\\PycharmProject\\Examples\\venv\\Lib\\site-packages\\selenium\\webdriver\\chrome\\chromedriver.exe')
+            driver = webdriver.Chrome()
             driver.get('https://web.whatsapp.com/')
             time.sleep(15)
             sender_name = input("Enter the name to whom you want to send message: ")
@@ -187,9 +196,15 @@ if __name__ == "__main__":
                 a = tb.sentiment
                 print(a)
                 speak(a)
+        elif 'take note' in query:
+            speak('taking note for you please speak what should i note down')
+            note = takeCommand()
+            if note:
+                now = datetime.now().astimezone().isoformat()
+                res = client.create_page(note, now, status="Active")
+                if res.status_code == 200:
+                    speak(f"{note} stored on notion")
 
         elif 'terminate' in query:
             speak("Thanks for using my service. happy to help you")
             break
-
-
